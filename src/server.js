@@ -8,6 +8,10 @@ const port = 3000
 //ler o json trafegado na aplicação
 app.use(express.json())
 
+app.listen(port, () => {
+    console.log('Seja bem vindo a minha API')
+})
+
 app.get("/", (req,res)=> {
       res.json("hello world")
 })
@@ -19,6 +23,3 @@ app.get("/frutas", async (req,res) =>{
 
 })
 
-app.listen(port, () => {
-    console.log('Seja bem vindo a minha API')
-})
